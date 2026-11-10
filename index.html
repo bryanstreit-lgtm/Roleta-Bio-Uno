@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz: Ciclos Biogeoquímicos - 8º Ano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- 1. TELA INICIAL -->
+    <div id="tela-inicial">
+      <h1>Ciclos Biogeoquímicos</h1>
+      <p class="subtitulo">Escolha uma cor para sortear uma pergunta (8º Ano)</p>
+
+      <div class="grid-ciclos">
+        <button class="btn-ciclo azul" onclick="iniciarPergunta('agua')">
+          <span class="tag-cor">Azul</span>
+          Ciclo da Água
+        </button>
+
+        <button class="btn-ciclo verde" onclick="iniciarPergunta('carbono')">
+          <span class="tag-cor">Verde</span>
+          Ciclo do Carbono
+        </button>
+
+        <button class="btn-ciclo amarelo" onclick="iniciarPergunta('oxigenio')">
+          <span class="tag-cor">Amarelo</span>
+          Ciclo do Oxigênio
+        </button>
+
+        <button class="btn-ciclo vermelho" onclick="iniciarPergunta('nitrogenio')">
+          <span class="tag-cor">Vermelho</span>
+          Ciclo do Nitrogênio
+        </button>
+      </div>
+    </div>
+
+    <!-- 2. TELA DA PERGUNTA -->
+    <div id="tela-pergunta" class="oculto">
+      <div id="badge-ciclo" class="badge-ciclo">Ciclo</div>
+      
+      <div id="pergunta-texto" class="pergunta-texto">
+        Texto da pergunta aparecerá aqui...
+      </div>
+
+      <div id="opcoes-lista" class="opcoes-lista">
+        <!-- Botões das 4 alternativas gerados via JavaScript -->
+      </div>
+
+      <button class="btn-pular" onclick="pularQuestao()">Pular Questão</button>
+    </div>
+
+    <!-- 3. TELA DE FEEDBACK -->
+    <div id="tela-feedback" class="tela-feedback oculto">
+      <div id="mensagem-feedback" class="mensagem-feedback"></div>
+      <p class="aviso-retorno">Voltando para a tela inicial...</p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
